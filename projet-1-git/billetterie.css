@@ -65,7 +65,7 @@ nav li a {
     font-weight: 700;
     background-color: var(--light-color);
     height: 100%;
-    width: 100;
+    width: 100%;
     display:block;
     padding-left:1.5em;
     padding-right:1.5em;
@@ -100,15 +100,10 @@ nav li a:last-of-type {
     padding-bottom: 1em;
 }
 
-.dropdown-menu li:hover {
-    background-color: #17021F;
-
-}
-
 .dropdown-menu li:hover a {
+    background-color: var(--secondary-color);
     color:var(--light-color); 
-} 
-
+}
 
 #logo {
     font-size: x-large;
