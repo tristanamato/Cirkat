@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #17021F;
+    --black: #05001F;
+    --secondary-color: #6E0A0A;
+    --light-color: #C1C1C3;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+background-color: var(--primary-color);
+font-family: Inter;
+}
+
+.nav-visible {
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:var(--dark-color);
+    background-color: var(--light-color);
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin: 0% auto;
+    position:fixed;
+    /* fixed position interferes with flexbox centering => use left:0/right:0/margin : 0% auto */
+    /* fixed position used to overlay navbar on top of other content */
+    transition: 0.4s ease-out;
+    z-index: 1;
+}
+
+.nav-transparent {
+    background-color: transparent;
+    color:var(--light-color);
+    transition: background-color 0.4s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin: 0% auto;
+    position:fixed;
+    border-radius: 0 0 10px 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-color);
+
+    /* padding-right: 1.5em; */
+
+}
+
+nav li a {
+    text-decoration: none;
+    color:var(--dark-color);
+    font-weight: 700;
+    background-color: var(--light-color);
+    height: 100%;
+    width: 100%;
+    display:block;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    padding-bottom:0.5rem;
+    padding-top: 0.5rem;
+
+}
+
+.dropdown-menu {
+    margin:0;
+    width:100%;
+    height: 0;
+    /* display : none; */
+    flex-direction: column;
+    align-self: center;
+    overflow: hidden;
+    border-radius: inherit;
+    transition: height 0.4s ease-out;
+}
+
+.dropdown-menu li {
+    background-color: var(--light-color);
+    list-style: none;
+    /* padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    width: 100%; */
+}
+
+nav li a:last-of-type {
+    padding-bottom: 1em;
+}
+
+.dropdown-menu li:hover a {
+    background-color: var(--secondary-color);
+    color:var(--light-color); 
+}
+
+#logo {
+    font-size: x-large;
+    font-weight: 800 ;
+    background-color: var(--light-color);
+    text-decoration: none;
+    color:inherit;
+
+
+}
+
+.hamburger{
+    position: relative;
+    display: block;
+    width: 2em;
+    cursor: pointer;
+    appearance: none;
+    background : none;
+    outline: none;
+    border:none;
+    margin:1em 1em 1em 0;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content:'';
+    display:block;
+    width:100%;
+    min-height:5px;
+    background-color: var(--dark-color);
+    margin : 4px 0px;
+    transition:0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-4px, -8px);
+}
+
+.hamburger.is-active .bar{
+    opacity: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+nav>ul>li {
+    text-decoration: none;
+    width: 12.9375rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+}
+nav h1 {
+    background-color: lightgray;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+#flying_fantasy {
+        display: flex;
+        flex-wrap: wrap;
+}
+
+#flying_image {
+    display: inline-block;
+}
+#flying_image img {
+    width: 100%;
+}
+
+#diamond_swingers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#diamond_image {
+    display: inline-block;
+}
+
+#diamond_image image {
+    width: 100%;
+}
+
+#stars_balance {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#stars_image {
+    display: inline-block;
+}
+
+#stars_image img {
+    width: 100%;
+}
+
+p {
+    display: block;
+    width: 25rem;
+    text-align: justify;
+}
+
+section#diamond_swingers {
+    display: flex;
+    justify-content: flex-end;
+    justify-content:space-around ;
+    align-items: center;
+    color: #C1C1C3;
+}
+
+section#diamond_swingers div#diamond_text div#diamond_paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1;
+}
+
+section#flying_fantasy {
+    display: flex;
+    justify-content: flex-end;
+    justify-content:space-around ;
+    align-items: center;
+    color: #C1C1C3;
+}
+
+section#flying_fantasy div#flying_text div#fantasy_paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1;
+}
+
+section#stars_balance {
+    display: flex;
+    justify-content: flex-end;
+    justify-content:space-around ;
+    align-items: center;
+    color: #C1C1C3;
+}
+
+section#stars_balance div#stars_text div#stars_paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1;
+}
+div#diamond_titles h2:nth-child(1) {
+    text-align: end;
+}
+
+div#diamond_titles h2 {
+    margin-right: 0.3125rem;
+}
+
+div#diamond_titles h2:nth-child(2) {
+    margin-left: 6.25rem;
+}
+
+div#diamond_titles {
+    line-height: 0.625rem;
+    font-size: 1.25rem;
+}
+
+div#stars_titles h2:nth-child(1) {
+    text-align: start;
+}
+
+div#stars_titles h2 {
+    margin-right: 0.3125rem;
+}
+
+div#stars_titles h2:nth-child(2) {
+    margin-left: 6.25rem;
+}
+
+div#stars_titles {
+    line-height: 0.625rem;
+    font-size: 1.25rem;
+}
+div#flying_titles h2:nth-child(1) {
+    text-align: end;
+}
+
+div#flying_titles h2 {
+    margin-right: 0.3125rem;
+}
+
+div#flying_titles h2:nth-child(2) {
+    margin-left: 9.375rem;
+}
+
+div#flying_titles {
+    line-height: 0.625rem;
+    font-size: 1.25rem;
+}
+
+h1 {
+    display: flex;
+    width: 35.25rem;
+    height: 3.5rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    border-radius: 0 3.125rem 3.125rem 0;
+    background: var(--Secondary-color, #6E0A0A);
+    color: #C1C1C3;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: var(--black);
+    color: #C1C1C3;
+    height: 100%;
+    padding: 1.25rem;
+    padding-right:0.625rem;
+    display: flex;
+    justify-content: space-between;
+}
