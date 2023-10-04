@@ -7,6 +7,10 @@
 
 }
 
+header {
+    min-height: 50px;
+}
+
 * { margin: 0%;
     padding: 0%;
     background-color: var(--primary-color);
@@ -26,7 +30,7 @@
     left: 0;
     right: 0;
     margin: 0% auto;
-    /* position:fixed; */
+    position:fixed;
     /* fixed position interferes with flexbox centering => use left:0/right:0/margin : 0% auto */
     /* fixed position used to overlay navbar on top of other content */
     transition: 0.4s ease-out;
@@ -151,11 +155,11 @@ nav li a:last-of-type {
 
 
 #diamond-swingers h1 {
-    text-align: left;
+    text-align: center;
     padding: 0.5rem;
-    border-radius: 1.3rem;
+    border-radius: 0rem 1.3rem 1.3rem 0rem;
     background-color:var(--secondary-color);
-    width: 16rem;
+    width: 11rem;
     color: var(--light-color);
     /* margin-bottom: 3rem;
     margin-top: 10rem; */
