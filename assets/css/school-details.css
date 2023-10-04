@@ -32,7 +32,7 @@
     /* fixed position interferes with flexbox centering => use left:0/right:0/margin : 0% auto */
     /* fixed position used to overlay navbar on top of other content */
     transition: 0.4s ease-out;
-    z-index: 1;
+    z-index: 2;
 }
 .nav-transparent {
     background-color: transparent;
@@ -48,7 +48,7 @@
     margin: 0% auto;
     position:fixed;
     border-radius: 0 0 10px 10px;
-    z-index: 1;
+    z-index: 2;
 }
 .logo-container {
     display: flex;
