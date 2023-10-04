@@ -1,6 +1,10 @@
 const $ = str => document.querySelector(str);
 const $$ = str => document.querySelectorAll(str);
 
+function hideButtons(app) {
+    
+}
+
 (function() {
     if (!window.app) {
         window.app = {};
@@ -174,7 +178,7 @@ const $$ = str => document.querySelectorAll(str);
             $('#prev').addEventListener("click", app.carousel.previous);
             $('#next').addEventListener("click", app.carousel.next);
             app.selected = $(".selected");
-
+            app.selected.querySelector("button").classList.remove("hidden");
         },
         state: {}
 
