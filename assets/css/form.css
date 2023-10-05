@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #17021F;
+    --black: #05001F;
+    --secondary-color: #6E0A0A;
+    --light-color: #c1c1c3;
+    --dark-color: #383837;
+
+}
+
+* {
+    background-color: var(--primary-color);
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: Inter;
+}
