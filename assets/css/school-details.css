@@ -254,25 +254,215 @@ div.Cours{
     margin: 0.90em;
  }
 
-footer {
-    background-color: #05001f;
-    color: #C1C1C3;
-    padding: 15px;
+ /* footer start */
+ footer{
+    position: relative;
+    width: 100%;
+    background: #420D30 ;  
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    color: #C1C1C3;
+    margin-top: 160px;
+
+}
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+footer .social_icon li {
+    list-style: none;
+
+}
+footer .social_icon li a{
+    font-size: 2rem;
+    color: #C1C1C3 ;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover{
+    transform: translate(-10px);
 }
 
- 
-   
+div#mail{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
     
+}
+div#number{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
     
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: url("../images/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+
+} 
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+
+}
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+
+}
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+
+}
+
+
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_02{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+/* footer end */
+
+
+
+@media screen and (max-width: 565px) {
+      .slider{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        border-radius: 0.5rem;
+    }
+
+    .slider img {
+        height: 17rem;
+    }
+    section.text{
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
+    section.text p {
+        word-spacing: 0.1px;
+    }
+       
+        
+    
+    section.registration{
+        font-size: 1.3rem;
+        line-height: 1.5;
+       }
+
+       section.registration p {
+        word-spacing: 0.1px;
+    }
+
+     div.Cours{
+        font-size: 1.3rem;
+        
+
+
+    }
+    .nav-visible {
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:var(--dark-color);
+        background-color: var(--light-color);
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0% auto;
+        position:fixed;
+        /* fixed position interferes with flexbox centering => use left:0/right:0/margin : 0% auto */
+        /* fixed position used to overlay navbar on top of other content */
+        transition: 0.4s ease-out;
+        z-index: 2;
+    }
+    .nav-transparent {
+        background-color: transparent;
+        color:var(--light-color);
+        transition: background-color 0.4s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0% auto;
+        position:fixed;
+        border-radius: 0 0 10px 10px;
+        z-index: 2;
+    }
+    .dropdown-menu li {
+        background-color: var(--light-color);
+        list-style: none;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 565px) and (max-width: 1024px) {
+    .slider img {
+        height: 20rem;
+    }
 
     
- 
-
-
-  
+}
 
 
 
+/* @media (max-width: 750px) {
+    .slider img {
+        height: 20rem;
+    }
+} */

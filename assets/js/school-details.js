@@ -41,7 +41,26 @@ window.onload = function () {
 window.addEventListener('scroll', () => {
     
 displayWhiteNav = (document.documentElement.scrollTop > navbarHeightPx);
-setNavBackgroundVisibility(displayWhiteNav);
+
+document.addEventListener('click', function(e) {
+  if (!nav.contains(e.target)) {
+    slideUp(dropDownMenu);
+    dropDownBtn.classList.remove('is-active');
+    if(dropDownMenu.style.height === '0px'){
+      setNavBackgroundVisibility(displayWhiteNav)
+    }
+    else {
+      setNavBackgroundVisibility(true);
+    }
+  }
+})
+
+if (dropDownBtn.classList.contains('is-active') || displayWhiteNav) {
+  setNavBackgroundVisibility(true);
+} else {
+  setNavBackgroundVisibility(displayWhiteNav);
+}
+
   //same as this :
   //  if (document.documentElement.scrollTop > navbarHeightPx) {
   //   setNavBackgroundVisibility(displayWhiteNav);
