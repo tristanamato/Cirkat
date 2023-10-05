@@ -1,6 +1,10 @@
 const $ = str => document.querySelector(str);
 const $$ = str => document.querySelectorAll(str);
 
+function hideButtons(app) {
+    
+}
+
 (function() {
     if (!window.app) {
         window.app = {};
@@ -79,11 +83,10 @@ const $$ = str => document.querySelectorAll(str);
             app.carousel.removeClass(prev).classList.add('prev');
             app.carousel.removeClass(next).classList.add('next');
 
-            app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
-            app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
+            let selectedImg = selected.querySelector("img");
+            let targetImg = document.querySelector(".current--image img");
+            targetImg.src = selectedImg.src;
 
-            app.carousel.nextAll(nextSecond).forEach(item=>{ item.className = ''; item.classList.add('hideRight') });
-            app.carousel.prevAll(prevSecond).forEach(item=>{ item.className = ''; item.classList.add('hideLeft') });
         },
         nextAll: function(el) {
             let els = [];
@@ -173,7 +176,13 @@ const $$ = str => document.querySelectorAll(str);
             app.carousel.reorder();
             $('#prev').addEventListener("click", app.carousel.previous);
             $('#next').addEventListener("click", app.carousel.next);
+            
             app.selected = $(".selected");
+            app.selected.querySelector("button").classList.remove("hidden");
+
+            let selectedImg = app.selected.querySelector("img");
+            let targetImg = document.querySelector(".current--image img");
+            targetImg.src = selectedImg.src;
 
         },
         state: {}
