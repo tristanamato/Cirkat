@@ -4,17 +4,6 @@ const dropDownBtn = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 const navTransparent = document.querySelector('.nav-transparent');
 const navbarHeightPx = 50;
-// let displayWhiteNav = false;
-
-// function setNavBackgroundVisibility(isVisible) {
-//     if (isVisible) {
-//       nav.classList.remove('nav-transparent'); 
-//       nav.classList.add('nav-visible');
-//     } else {
-//       nav.classList.remove('nav-visible');   
-//       nav.classList.add('nav-transparent');
-//     }
-// }
 
 window.onload = function () {
     
@@ -33,16 +22,8 @@ window.onload = function () {
   })  
 }
 
+
 // End of burger animation
-
-// Nav bar scroll animation to remove background
-
-// window.addEventListener('scroll', () => {
-    
-// displayWhiteNav = (document.documentElement.scrollTop > navbarHeightPx);
-// setNavBackgroundVisibility(displayWhiteNav);
-// });
-// End of nav bar scroll animation
 
 // Slide up and down animation for dropdown menu
 
@@ -59,6 +40,13 @@ dropDownBtn.addEventListener('click', () => {
     else {
         slideUp(dropDownMenu);        
     }       
+})
+
+document.addEventListener('click', function(e) {
+  if (!nav.contains(e.target)) {
+    slideUp(dropDownMenu);
+    dropDownBtn.classList.remove('is-active');
+  }
 })
 
 // End of navbar slide animation
