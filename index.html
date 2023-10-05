@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-page</title>
+    <title>CIRKAT</title>
     <link rel="stylesheet" href="assets/css/index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,22 +12,23 @@
 
 </head>
 <body>
-   <section class="welcome">
-        <nav class="nav-transparent">
-            <div class="logo-container">
-                <button class="hamburger">
-                    <div class="bar"></div>
-                </button>
-                <a id="logo" href="index.html">CIRKAT</a>
-            </div>
-            <ul class="dropdown-menu">            
-                <li><a href="#">SHOWS</a></li>
-                <li><a href="tickets.html">TICKETS</a></li>
-                <li><a href="school-details.html">CIRCUS SCHOOL</a></li>
-            </ul>    
-        </nav>        
-        
-    </section>
+  <header>
+    <nav class="nav-transparent">
+        <div class="logo-container">
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+            <a id="logo" href="index.html">CIRKAT</a>
+        </div>
+        <ul class="dropdown-menu">            
+            <li><a href="#">SHOWS</a></li>
+            <li><a href="tickets.html">TICKETS</a></li>
+            <li><a href="school-details.html">CIRCUS SCHOOL</a></li>
+        </ul>    
+    </nav>
+  </header>
+
+    <section id="Content">
     
     <section class="video-overlay">
 
@@ -36,76 +37,33 @@
         </div>        
         
         <div class="button-container">  
-            <button class="billetterie"><a href="tickets.html">TICKETS</a></button>
+            <button class="billetterie" onclick="window.location.href='tickets.html'"><a href="tickets.html">TICKETS</a></button>
         </div> 
 
     </section>
 
-    <section class="current-shows-on-main">
+  <section id="carousel-section">
 
+    <div id="carousel-header">
         <h1>CURRENT SHOWS</h1>
+    </div>
 
-        <!-- <div class="show-img-container">
-
-            <div class="btn-overlay">
-                <img src="./assets/images-show/diamond-swingers.jpeg" class="main-page-shows" alt="diamond-swingers">
-                
-                <span class="material-symbols-outlined">arrow_circle_right</span>
-                <button>En savoir plus</button>
-            </div>
-            
-            <div class="btn-overlay">
-                <img src="./assets/images-show/stars-in-balance.jpg" class="main-page-shows" alt="stars-in-balance">
-                <span class="material-symbols-outlined">arrow_circle_right</span>
-                <button>En savoir plus</button>
-            </div>
-            
-            <div class="btn-overlay">
-                <img src="./assets/images-show/flying-fantasy.jpg" class="main-page-shows" alt="flying-sister">
-                <span class="material-symbols-outlined">arrow_circle_right</span>
-                <button>En savoir plus</button>   
-            </div>
-
-        </div> -->
-        
-    </section>
-
-<div id="carousel" class="carousel">
-
-       <!-- <div id='iten_1' class="hideLeft">
-        <img src="https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089__340.jpg">
-      </div>
-
-      <div id='item_2' class="prevLeftSecond">
-        <img src="https://cdn.pixabay.com/photo/2012/11/28/11/28/rocket-launch-67723__340.jpg">
-      </div> -->
+    <div id="carousel" class="carousel">
 
       <div id='item_3' class="prev">
-        <img src="./assets/images/diamond-swingers.jpeg">
-        <button>En savoir plus</button>
+        <img src="./assets/images/diamond-swingers.jpeg" alt="diamond-swingers">
+        <button class="hidden">En savoir plus</button>
       </div>
 
       <div id='item_4' class="selected">
-        <img src="./assets/images/stars-in-balance.jpg">
+        <img src="./assets/images/stars-in-balance.jpg" alt="stars in balance">
         <button>En savoir plus</button>
       </div>
 
       <div id='item_5' class="next">
-        <img src="./assets/images/flying-fantasy.jpg">
-        <button>En savoir plus</button>
+        <img src="./assets/images/flying-fantasy.jpg" alt="flying-fantasy">
+        <button class="hidden">En savoir plus</button>
       </div>
-
-      <!-- <div id='item_6' class="nextRightSecond">
-        <img src="https://cdn.pixabay.com/photo/2017/02/09/09/11/starry-sky-2051448__340.jpg">
-      </div> -->
-
-      <!-- <div id='item_7' class="hideRight">
-        <img src="https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188__340.jpg">
-      </div>
-
-      <div id='item_8' class="hideRight">
-        <img src="https://cdn.pixabay.com/photo/2011/12/15/11/32/pismis-24-11186__340.jpg">
-      </div> -->
 
     </div>
 
@@ -115,6 +73,31 @@
 
     	<button class="button-82-pushable" role="button" id="next"><span class="button-82-shadow"></span><span class="button-82-edge"></span><span class="button-82-front text">Next</span></button>
     </div>
+
+    <div class="app__bg">
+      <!-- <div class="app__bg__image previous--image">
+            <img src="./assets/images/diamond-swingers.jpeg" alt="diamond-swingers">
+      </div>
+
+      <div class="app__bg__image current--image">
+        <img src="./assets/images/stars-in-balance.jpg" alt="stars in balance">
+      </div>
+
+      <div class="app__bg__image next--image">
+        <img src="./assets/images/flying-fantasy.jpg" alt="flying-fantasy">
+      </div> -->
+
+      <div class="app__bg__image current--image">
+        <img src="">
+      </div>
+
+    </div>
+
+  </section> <!--carousel-section-->
+
+  </section> <!--content-->
+
+    
 
     <footer>
        <p>© cirkat@gmail.com</p>
