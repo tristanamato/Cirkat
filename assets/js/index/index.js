@@ -6,6 +6,7 @@ const navTransparent = document.querySelector('.nav-transparent');
 const navbarHeightPx = 50;
 let displayWhiteNav = false;
 
+
 function setNavBackgroundVisibility(isVisible) {
     if (isVisible) {
       nav.classList.remove('nav-transparent'); 
@@ -15,6 +16,7 @@ function setNavBackgroundVisibility(isVisible) {
       nav.classList.add('nav-transparent');
     }
 }
+
 
 window.onload = function () {
     
@@ -49,7 +51,28 @@ window.onload = function () {
 window.addEventListener('scroll', () => {
     
 displayWhiteNav = (document.documentElement.scrollTop > navbarHeightPx);
-setNavBackgroundVisibility(displayWhiteNav);
+
+document.addEventListener('click', function(e) {
+  if (!nav.contains(e.target)) {
+    slideUp(dropDownMenu); 
+    dropDownBtn.classList.remove('is-active');
+
+    if(dropDownMenu.style.height === '0px'){
+      setNavBackgroundVisibility(displayWhiteNav)
+    }
+    else {
+      setNavBackgroundVisibility(true);        
+    }       
+  }
+})
+
+
+if (dropDownBtn.classList.contains('is-active') || displayWhiteNav) {
+    setNavBackgroundVisibility(true); 
+  } else {
+    setNavBackgroundVisibility(displayWhiteNav);
+  }
+
 
   //same as this :
   //  if (document.documentElement.scrollTop > navbarHeightPx) {
@@ -80,20 +103,5 @@ dropDownBtn.addEventListener('click', () => {
     }       
 })
 
+
 // End of navbar slide animation
-
-
-
-// Get height of Ticket btn on main page to divide by 2 to overlay btn on top of video
-let ticketBtnHeight = document.querySelector('.button-container').offsetHeight;
-
-console.log(ticketBtnHeight/2);
-
-// ticketBtnHeight.style.marginBottom = `${ticketBtnHeight/2}px`;
-
-// End of Ticket btn height 
-
-
-
-
-
