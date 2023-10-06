@@ -105,3 +105,27 @@ dropDownBtn.addEventListener('click', () => {
 
 
 // End of navbar slide animation
+
+//animate on scroll shows on main page
+const elementsToShow = document.querySelectorAll('[data-img]');
+
+const observer = new IntersectionObserver((entries)=> {
+  for (let i=entries.length - 1;i=0;i--) {
+    const entry = entries[i];
+    if (entry.isIntersecting) {
+      elementsToShow.forEach( img => {
+        img.classList.show('reveal');
+      });
+      const img = document.querySelector(entry.target.dataset.imgToShow);
+      img?.classList.add('reveal');
+      // entry.target.classList.add('reveal');
+    }
+  }
+  });
+
+
+
+
+elementsToShow.forEach((section) => {
+  observer.observe(section);
+  });
