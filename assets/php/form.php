@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<header>
    <form action ="result.php" method="post">
    <div id="firstname>
       <label  for="firstname">Name :</label>
@@ -61,7 +62,6 @@
       <label  for="dateCard"> Expiration date :</label>
         <input  type="date"  id="dateCard"  name="dateCard">
     </div>
-    
       
     <div id="message">
       <label  for="message">Message :</label>
@@ -69,5 +69,6 @@
     </div>
     <div  class="button">
       <button  type="submit">Send message</button>  
+
 </body>
 </html>

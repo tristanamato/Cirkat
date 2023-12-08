@@ -8,11 +8,111 @@
 }
 
 * {
-    background-color: var(--primary-color);
+    list-style-type: none;
     font-family: 'Inter', sans-serif;
 }
 
+
+
+/* Styles généraux */
 body {
+    font-family: Arial, sans-serif;
     background-color: var(--primary-color);
-    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--light-color);
+}
+
+/* Styles des champs de saisie et des étiquettes */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style du bouton */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles spécifiques aux éléments du formulaire en utilisant les ID */
+#firstname,
+#lastname,
+#address,
+#email,
+#shows,
+#number,
+#securityCode,
+#dateCard,
+#message {
+    margin-top: 20px;
+}
+
+#shows select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.button button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: #0056b3;
+}
+
+#errors {
+    color: var(--secondary-color);
+}
+
+#valid {
+    color: var(--light-color);
 }
