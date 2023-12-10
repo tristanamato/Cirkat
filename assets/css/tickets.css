@@ -139,7 +139,7 @@ nav li a:last-of-type {
     display: block;
     width: 100%;
     min-height: 5px;
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     margin: 4px 0px;
     transition: 0.4s;
 }
@@ -459,7 +459,7 @@ article {
         'opsz' 24
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .button {
         font-size: 0.9rem;
         padding: 0.3rem;
@@ -486,7 +486,7 @@ article {
 
     #diamond-swingers h1 {
         font-size: 1.3rem;
-        width: 7rem;
+       
 
     }
 

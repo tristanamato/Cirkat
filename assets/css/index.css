@@ -134,7 +134,7 @@ nav li a {
   display: block;
   width: 100%;
   min-height: 5px;
-  background-color: var(--dark-color);
+  background-color: var(--light-color);
   margin: 4px 0px;
   transition: 0.4s;
 }
@@ -585,7 +585,7 @@ footer .wave#wave4 {
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
 
   html {
     overflow-x: hidden;
@@ -707,7 +707,7 @@ footer .wave#wave4 {
     -ms-transform: translate(-50%, -50%);
     /* border: 0.07em solid var(--light-color); */
     border: none;
-    padding: 1% 4%;
+    padding: 2% 4%;
     margin-bottom: 0.02em;
     font-size: medium;
     font-weight: 500;
